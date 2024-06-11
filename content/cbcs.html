@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CBCS Projects Portal</title>
+<link rel="shortcut icon" href="/site/favicon">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="/static/modifications.css?v=3d330297ae4280b03b73923b571fec6e2c766d7f10a52ade95f063e2832340f2bce223f205524755153176af00483e9cc8e5414440145f9fa6373418995c418a">
+
+
+
+</head>
+<body>
+<nav class="navbar navbar-static-top navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle"
+data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/">
+
+<img src="/site/icon"
+title="CBCS Projects Portal" alt="CBCS Projects Portal">
+
+</a>
+</div>
+<!--
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav">
+<li>
+<a id="home" href="/">
+<span class="glyphicon glyphicon-home"></span>
+</a>
+</li>
+ 
+ 
+ 
+
+
+<li>
+<a href="/files">Documents</a>
+</li>
+
+ 
+<li>
+<a href="/documentation">Documentation</a>
+</li>
+
+<li>
+<a href="/contact">Contact</a>
+</li>
+
+
+
+</ul>
+<div>
+<ul class="nav navbar-nav navbar-right">
+ 
+
+ 
+ 
+</ul>
+</div>
+</div>
+-->
+</div>
+</nav>
+ 
+<div class="container">
+
+
+<div class="row">
+<div class="col-md-12">
+<div class="lead alert alert-danger" style="margin: 4px;" role="alert">
+ 
+<p><strong>Scheduled maintenance</strong>  This site is under maintenance in order to be move to a new infrastructure.  We expect the service to be unavailable until 18:00 CEST at the latest and apologise for the inconvenience.  Please check the Slack channel <code>#dc-system-status</code> for updates.  The development team can be contacted at <code>datacentre@scilifelab.se</code> if you have any question.</p>
+
+</div>
+</div>
+</div>
+ 
+
+<div class="row">
+<div class="col-md-4">
+<img src="/site/image" title="CBCS Projects Portal"
+class="img-responsive" style="margin-top: 20px">
+</div>
+<div class="col-md-8">
+<h2>CBCS Projects Portal</h2>
+<p>This portal is for CBCS project handling. It is <strong>not</strong> a portal for researchers to place orders.</p>
+
+</div>
+</div>
+<br>
+ 
+ 
+ 
+
+<div class="row">
+<div class="col-md-6">
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<span class="glyphicon glyphicon-user"></span> Login
+</div>
+<div class="panel-body">
+<form action="/login" method="POST" role="form">
+<input type="hidden" name="_xsrf" value="2|cf1c113b|27dd998f17f5456ad9f9882f197779fb|1718116003"/>
+<div class="form-group">
+<label for="email">Email</label>
+<input type="text" name="email" placeholder="Email address of account"
+class="form-control">
+</div>
+<div class="form-group">
+<label for="password">Password</label>
+<input type="password" name="password" class="form-control">
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-info btn-block">
+<span class="glyphicon glyphicon-log-in"></span> Login
+</button>
+</div>
+</form>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div>
+<a href="/register" role="button"
+class="btn btn-success btn-block">
+<span class="glyphicon glyphicon-user"></span> Register account
+</a>
+</div>
+<br>
+<div>
+<a href="/reset" role="button"
+class="btn btn-warning btn-block">
+<span class="glyphicon glyphicon-step-backward"></span> Reset password
+</a>
+</div>
+<br>
+<div>
+<a href="/password" role="button"
+class="btn btn-danger btn-block">
+<span class="glyphicon glyphicon-lock"></span> Set password
+</a>
+</div>
+</div>
+</div>
+ 
+</div>
+<div class="col-md-6">
+
+<div class="panel-group">
+
+
+<div class="panel panel-primary">
+<div class="panel-heading">
+CBCS project
+<div class="form-group pull-right">
+<form action="/order" method="POST">
+<input type="hidden" name="_xsrf" value="2|cf1c113b|27dd998f17f5456ad9f9882f197779fb|1718116003"/>
+<button type="submit" class="btn btn-default btn-xs"
+
+disabled="disabled"
+title="You must be logged in to create project."
+
+>
+<span class="glyphicon glyphicon-plus"></span>
+Create project
+</button>
+<input type="hidden" name="form" value="1b752355eedb453ba7b2dce575749fed">
+</form>
+</div>
+</div>
+<div class="panel-body">
+<p>General CBCS project.</p>
+
+</div>
+</div>
+ 
+ 
+</div>
+ 
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p>[Add general information about the facility.]</p>
+
+</div>
+</div>
+ 
+</div> 
+<div class="container-fluid">
+<hr>
+<div class="row">
+<div class="col-md-3">
+
+<a href="https://www.scilifelab.se/data/" target="_blank">
+
+<img src="/site/host_icon"
+title="Site host SciLifeLab Data Centre">
+&nbsp;
+
+SciLifeLab Data Centre
+</a>
+
+</div>
+<div class="col-md-6 text-center">
+
+No session cookie is used for anonymous users.
+
+</div>
+<div class="col-md-3">
+<div class="pull-right">
+<a href="/software">OrderPortal</a>
+<span id="version">11.4.2</span>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+crossorigin="anonymous"></script>
+<script src="/static/jquery.localtime-0.9.1.min.js?v=175d6d298d92a6c7a811f56d8e96e09b30491e696a40a4996e7a871e6697b37dc282a4172fa2ffc8e831a788a3101b8f8168177a79ceac040ae97bf773596a31"></script>
+<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script>
+<script>
+$.datepicker.setDefaults({dateFormat: "yy-mm-dd"});
+$(function(){ $(".datepicker").datepicker(); });
+</script>
+
+<script>
+$(function(){ $("#email").focus(); });
+</script>
+
+
+
+</body>
+</html>
