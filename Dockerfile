@@ -1,5 +1,6 @@
 FROM nginx
 # COPY maintenance.html /usr/share/nginx/html/index.html
+RUN apt update && apt install -y git
 RUN mkdir /usr/share/nginx/html/status
 COPY status.html /usr/share/nginx/html/status/index.html
 COPY default.conf /etc/nginx/conf.d
